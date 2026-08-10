@@ -1,6 +1,3 @@
-Here is the updated code with the new **Date Position** adjustment slider added right alongside the Name, Amount, and Words position controls. It fully integrates with `localStorage` so your date position adjustments will be saved automatically just like the others.
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,13 +9,22 @@ Here is the updated code with the new **Date Position** adjustment slider added 
 body{margin:0;text-align:center;font-family:Arial,sans-serif;background:#fff}
 .containerx{transform:rotateZ(90deg);display:inline-block;text-align:left;margin-top:52mm;width:190mm;height:90mm;border:1px dashed rgba(125,125,125,.1);box-sizing:border-box;padding:8px;font-family:"Arial Narrow";font-size:14px}
 .chqborder{--b:1px;--c:red;--w:1px;border:var(--b) solid #0000;--_g:#0000 90deg,var(--c) 0;--_p:var(--w) var(--w) border-box no-repeat;background:conic-gradient(from 90deg at top var(--b) left var(--b),var(--_g)) 0 0/var(--_p),conic-gradient(from 180deg at top var(--b) right var(--b),var(--_g)) 100% 0/var(--_p),conic-gradient(from 0deg at bottom var(--b) left var(--b),var(--_g)) 0 100%/var(--_p),conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 100% 100%/var(--_p)}
+
 .date{transform:rotateZ(180deg)!important;display:inline-block;position:absolute;bottom:var(--date-bottom);left:var(--date-left)}
 span.date span{border:solid thin white;padding:2mm;font-size:14px}
 .paymenttype{transform:rotateZ(150deg)!important;display:inline-block;position:absolute;bottom:8mm;right:0;border-top:solid thin black;border-bottom:solid thin black}
-.containerx{--name-bottom:21mm;--amount-bottom:30mm;--word-bottom:27mm;--date-bottom:9mm;--date-left:1mm}
-.name{transform:rotateZ(180deg)!important;display:inline-block;position:absolute;bottom:var(--name-bottom);right:40mm}
-.word{transform:rotateZ(180deg)!important;display:inline-block;position:absolute;bottom:var(--word-bottom);right:25mm;width:100mm;line-height:7mm}
-.amount{transform:rotateZ(180deg)!important;display:inline-block;position:absolute;bottom:var(--amount-bottom);left:3mm}
+
+.containerx{
+  --name-bottom:21mm; --name-right:40mm;
+  --amount-bottom:30mm; --amount-left:3mm;
+  --word-bottom:27mm; --word-right:25mm;
+  --date-bottom:9mm; --date-left:1mm;
+}
+
+.name{transform:rotateZ(180deg)!important;display:inline-block;position:absolute;bottom:var(--name-bottom);right:var(--name-right)}
+.word{transform:rotateZ(180deg)!important;display:inline-block;position:absolute;bottom:var(--word-bottom);right:var(--word-right);width:100mm;line-height:7mm}
+.amount{transform:rotateZ(180deg)!important;display:inline-block;position:absolute;bottom:var(--amount-bottom);left:var(--amount-left)}
+
 .chqprint{display:block;page-break-after:always;break-after:page;page-break-inside:avoid;break-inside:avoid;margin-bottom:200px}
 @media print{.no-print{display:none!important}body{background:#fff}}
 @media screen{body{overflow-x:hidden}.containerx{margin-top:10px}#chequecontainer{display:block;margin-left:340px;padding:10px 20px;text-align:left;margin-top:52MM}}
@@ -99,26 +105,55 @@ span.date span{border:solid thin white;padding:2mm;font-size:14px}
     <span class="fs-display" id="fs-display">14px</span>
     <button class="btn-fs" onclick="changeFontSize(1)">&#43;</button>
   </div>
+
+  <!-- Date Positions -->
   <div class="position-row">
-    <label>Date Position</label>
-    <input class="shift-range" type="range" id="date-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition('date',this.value)">
-    <span class="pos-display" id="date-shift-display">0mm</span>
+    <label>Date V-Pos (Up/Down)</label>
+    <input class="shift-range" type="range" id="date-v-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition('date_v',this.value)">
+    <span class="pos-display" id="date-v-shift-display">0mm</span>
   </div>
   <div class="position-row">
-    <label>Name Position</label>
-    <input class="shift-range" type="range" id="name-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition('name',this.value)">
-    <span class="pos-display" id="name-shift-display">0mm</span>
+    <label>Date H-Pos (Left/Right)</label>
+    <input class="shift-range" type="range" id="date-h-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition('date_h',this.value)">
+    <span class="pos-display" id="date-h-shift-display">0mm</span>
+  </div>
+
+  <!-- Name Positions -->
+  <div class="position-row">
+    <label>Name V-Pos (Up/Down)</label>
+    <input class="shift-range" type="range" id="name-v-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition('name_v',this.value)">
+    <span class="pos-display" id="name-v-shift-display">0mm</span>
   </div>
   <div class="position-row">
-    <label>Amount Position</label>
-    <input class="shift-range" type="range" id="amount-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition('amount',this.value)">
-    <span class="pos-display" id="amount-shift-display">0mm</span>
+    <label>Name H-Pos (Left/Right)</label>
+    <input class="shift-range" type="range" id="name-h-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition('name_h',this.value)">
+    <span class="pos-display" id="name-h-shift-display">0mm</span>
+  </div>
+
+  <!-- Amount Positions -->
+  <div class="position-row">
+    <label>Amount V-Pos (Up/Down)</label>
+    <input class="shift-range" type="range" id="amount-v-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition('amount_v',this.value)">
+    <span class="pos-display" id="amount-v-shift-display">0mm</span>
   </div>
   <div class="position-row">
-    <label>Words Position</label>
-    <input class="shift-range" type="range" id="word-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition('word',this.value)">
-    <span class="pos-display" id="word-shift-display">0mm</span>
+    <label>Amount H-Pos (Left/Right)</label>
+    <input class="shift-range" type="range" id="amount-h-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition('amount_h',this.value)">
+    <span class="pos-display" id="amount-h-shift-display">0mm</span>
   </div>
+
+  <!-- Words Positions -->
+  <div class="position-row">
+    <label>Words V-Pos (Up/Down)</label>
+    <input class="shift-range" type="range" id="word-v-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition('word_v',this.value)">
+    <span class="pos-display" id="word-v-shift-display">0mm</span>
+  </div>
+  <div class="position-row">
+    <label>Words H-Pos (Left/Right)</label>
+    <input class="shift-range" type="range" id="word-h-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition('word_h',this.value)">
+    <span class="pos-display" id="word-h-shift-display">0mm</span>
+  </div>
+
   <button id="pwa-install" onclick="_pwaInstall()">&#8615; Install App</button>
   <div class="btn-row">
     <button class="btn btn-secondary" onclick="resetForm()">Clear</button>
@@ -185,31 +220,50 @@ function _gf(){return parseInt(localStorage.getItem(_fk)||'14')}
 function _af(sz){document.querySelector('.containerx').style.fontSize=sz+'px';document.getElementById('fs-display').textContent=sz+'px';localStorage.setItem(_fk,sz)}
 function changeFontSize(d){_af(Math.min(_mx,Math.max(_mn,_gf()+d)))}
 
-var _dp='cheque_date_shift',_np='cheque_name_shift',_ap='cheque_amount_shift',_wp='cheque_word_shift';
+// Position storage keys
+var _dv_k='cheque_date_v', _dh_k='cheque_date_h';
+var _nv_k='cheque_name_v', _nh_k='cheque_name_h';
+var _av_k='cheque_amount_v', _ah_k='cheque_amount_h';
+var _wv_k='cheque_word_v', _wh_k='cheque_word_h';
+
 function _ps(){
-  var c=document.querySelector('.containerx'),
-      d=parseInt(localStorage.getItem(_dp)||'0',10),
-      n=parseInt(localStorage.getItem(_np)||'0',10),
-      a=parseInt(localStorage.getItem(_ap)||'0',10),
-      w=parseInt(localStorage.getItem(_wp)||'0',10);
+  var c=document.querySelector('.containerx');
+  var dv=parseInt(localStorage.getItem(_dv_k)||'0',10), dh=parseInt(localStorage.getItem(_dh_k)||'0',10);
+  var nv=parseInt(localStorage.getItem(_nv_k)||'0',10), nh=parseInt(localStorage.getItem(_nh_k)||'0',10);
+  var av=parseInt(localStorage.getItem(_av_k)||'0',10), ah=parseInt(localStorage.getItem(_ah_k)||'0',10);
+  var wv=parseInt(localStorage.getItem(_wv_k)||'0',10), wh=parseInt(localStorage.getItem(_wh_k)||'0',10);
   
-  c.style.setProperty('--date-bottom',(9+d)+'mm');
-  c.style.setProperty('--name-bottom',(21+n)+'mm');
-  c.style.setProperty('--amount-bottom',(30+a)+'mm');
-  c.style.setProperty('--word-bottom',(27+w)+'mm');
+  c.style.setProperty('--date-bottom',(9+dv)+'mm');
+  c.style.setProperty('--date-left',(1+dh)+'mm');
+  c.style.setProperty('--name-bottom',(21+nv)+'mm');
+  c.style.setProperty('--name-right',(40+nh)+'mm');
+  c.style.setProperty('--amount-bottom',(30+av)+'mm');
+  c.style.setProperty('--amount-left',(3+ah)+'mm');
+  c.style.setProperty('--word-bottom',(27+wv)+'mm');
+  c.style.setProperty('--word-right',(25+wh)+'mm');
   
-  document.getElementById('date-shift').value=d;
-  document.getElementById('name-shift').value=n;
-  document.getElementById('amount-shift').value=a;
-  document.getElementById('word-shift').value=w;
+  document.getElementById('date-v-shift').value=dv; document.getElementById('date-h-shift').value=dh;
+  document.getElementById('name-v-shift').value=nv; document.getElementById('name-h-shift').value=nh;
+  document.getElementById('amount-v-shift').value=av; document.getElementById('amount-h-shift').value=ah;
+  document.getElementById('word-v-shift').value=wv; document.getElementById('word-h-shift').value=wh;
   
-  document.getElementById('date-shift-display').textContent=d+'mm';
-  document.getElementById('name-shift-display').textContent=n+'mm';
-  document.getElementById('amount-shift-display').textContent=a+'mm';
-  document.getElementById('word-shift-display').textContent=w+'mm';
+  document.getElementById('date-v-shift-display').textContent=dv+'mm'; document.getElementById('date-h-shift-display').textContent=dh+'mm';
+  document.getElementById('name-v-shift-display').textContent=nv+'mm'; document.getElementById('name-h-shift-display').textContent=nh+'mm';
+  document.getElementById('amount-v-shift-display').textContent=av+'mm'; document.getElementById('amount-h-shift-display').textContent=ah+'mm';
+  document.getElementById('word-v-shift-display').textContent=wv+'mm'; document.getElementById('word-h-shift-display').textContent=wh+'mm';
 }
+
 function adjustChequePosition(type,val){
-  var key=type==='date'?_dp:type==='name'?_np:type==='amount'?_ap:_wp;
+  var key='';
+  if(type==='date_v') key=_dv_k;
+  else if(type==='date_h') key=_dh_k;
+  else if(type==='name_v') key=_nv_k;
+  else if(type==='name_h') key=_nh_k;
+  else if(type==='amount_v') key=_av_k;
+  else if(type==='amount_h') key=_ah_k;
+  else if(type==='word_v') key=_wv_k;
+  else if(type==='word_h') key=_wh_k;
+
   localStorage.setItem(key,parseInt(val,10));
   _ps();
 }
@@ -229,5 +283,3 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('/cheque_print
 <script type="module" src="../beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"6c10cef2752646e3883e4da07b6aee0d","r":1}' crossorigin="anonymous"></script>
 </body>
 </html>
-
-```
