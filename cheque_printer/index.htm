@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,13 +110,13 @@ span.date span{border:solid thin white;padding:2mm;font-size:14px}
   <!-- Date Positions -->
   <div class="position-row">
     <label>Date V-Pos (Up/Down)</label>
-    <input class="shift-range" type="range" id="date-v-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition('date_v',this.value)">
-    <span class="pos-display" id="date-v-shift-display">0mm</span>
+    <input class="shift-range" type="range" id="date-v-shift" min="-10" max="10" step="1" value="-1" oninput="adjustChequePosition('date_v',this.value)">
+    <span class="pos-display" id="date-v-shift-display">-1mm</span>
   </div>
   <div class="position-row">
     <label>Date H-Pos (Left/Right)</label>
-    <input class="shift-range" type="range" id="date-h-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition('date_h',this.value)">
-    <span class="pos-display" id="date-h-shift-display">0mm</span>
+    <input class="shift-range" type="range" id="date-h-shift" min="-10" max="10" step="1" value="3" oninput="adjustChequePosition('date_h',this.value)">
+    <span class="pos-display" id="date-h-shift-display">3mm</span>
   </div>
 
   <!-- Name Positions -->
@@ -145,13 +146,13 @@ span.date span{border:solid thin white;padding:2mm;font-size:14px}
   <!-- Words Positions -->
   <div class="position-row">
     <label>Words V-Pos (Up/Down)</label>
-    <input class="shift-range" type="range" id="word-v-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition('word_v',this.value)">
-    <span class="pos-display" id="word-v-shift-display">0mm</span>
+    <input class="shift-range" type="range" id="word-v-shift" min="-10" max="10" step="1" value="-1" oninput="adjustChequePosition('word_v',this.value)">
+    <span class="pos-display" id="word-v-shift-display">-1mm</span>
   </div>
   <div class="position-row">
     <label>Words H-Pos (Left/Right)</label>
-    <input class="shift-range" type="range" id="word-h-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition('word_h',this.value)">
-    <span class="pos-display" id="word-h-shift-display">0mm</span>
+    <input class="shift-range" type="range" id="word-h-shift" min="-10" max="10" step="1" value="1" oninput="adjustChequePosition('word_h',this.value)">
+    <span class="pos-display" id="word-h-shift-display">1mm</span>
   </div>
 
   <button id="pwa-install" onclick="_pwaInstall()">&#8615; Install App</button>
@@ -228,10 +229,14 @@ var _wv_k='cheque_word_v', _wh_k='cheque_word_h';
 
 function _ps(){
   var c=document.querySelector('.containerx');
-  var dv=parseInt(localStorage.getItem(_dv_k)||'0',10), dh=parseInt(localStorage.getItem(_dh_k)||'0',10);
-  var nv=parseInt(localStorage.getItem(_nv_k)||'0',10), nh=parseInt(localStorage.getItem(_nh_k)||'0',10);
-  var av=parseInt(localStorage.getItem(_av_k)||'0',10), ah=parseInt(localStorage.getItem(_ah_k)||'0',10);
-  var wv=parseInt(localStorage.getItem(_wv_k)||'0',10), wh=parseInt(localStorage.getItem(_wh_k)||'0',10);
+  var dv=parseInt(localStorage.getItem(_dv_k) ?? '-1', 10);
+  var dh=parseInt(localStorage.getItem(_dh_k) ?? '3', 10);
+  var nv=parseInt(localStorage.getItem(_nv_k)||'0',10);
+  var nh=parseInt(localStorage.getItem(_nh_k)||'0',10);
+  var av=parseInt(localStorage.getItem(_av_k)||'0',10);
+  var ah=parseInt(localStorage.getItem(_ah_k)||'0',10);
+  var wv=parseInt(localStorage.getItem(_wv_k) ?? '-1', 10);
+  var wh=parseInt(localStorage.getItem(_wh_k) ?? '1', 10);
   
   c.style.setProperty('--date-bottom',(9+dv)+'mm');
   c.style.setProperty('--date-left',(1+dh)+'mm');
@@ -283,3 +288,5 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('/cheque_print
 <script type="module" src="../beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"6c10cef2752646e3883e4da07b6aee0d","r":1}' crossorigin="anonymous"></script>
 </body>
 </html>
+
+```
