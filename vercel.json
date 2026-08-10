@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/cheque_printer/index.htm"
+    },
+    {
+      "source": "/manifest.json",
+      "destination": "/cheque_printer/manifest.json"
+    }
+  ]
+}
