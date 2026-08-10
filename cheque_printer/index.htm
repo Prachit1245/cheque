@@ -1,2 +1,233 @@
-</script><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#2272b5"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Prachit Cheque Printer"><link rel="apple-touch-icon" href="../assets/core/logo/128.png"><style>@page{size:a4 portrait !important;margin:0}body{margin:0;text-align:center;font-family:Arial,sans-serif;background:#fff}.containerx{transform:rotateZ(90deg);display:inline-block;text-align:left;margin-top:52mm;width:190mm;height:90mm;border:1px dashed rgba(125,125,125,.1);box-sizing:border-box;padding:8px;font-family:"Arial Narrow";font-size:14px}.chqborder{--b:1px;--c:red;--w:1px;border:var(--b) solid #0000;--_g:#0000 90deg,var(--c) 0;--_p:var(--w) var(--w) border-box no-repeat;background:conic-gradient(from 90deg at top var(--b) left var(--b),var(--_g)) 0 0/var(--_p),conic-gradient(from 180deg at top var(--b) right var(--b),var(--_g)) 100% 0/var(--_p),conic-gradient(from 0deg at bottom var(--b) left var(--b),var(--_g)) 0 100%/var(--_p),conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 100% 100%/var(--_p)}.date{transform:rotateZ(180deg)!important;display:inline-block;position:absolute;bottom:9mm;left:1mm}span.date span{border:solid thin white;padding:2mm;font-size:14px}.paymenttype{transform:rotateZ(150deg)!important;display:inline-block;position:absolute;bottom:8mm;right:0;border-top:solid thin black;border-bottom:solid thin black}.containerx{--name-bottom:21mm;--amount-bottom:30mm;--word-bottom:27mm}.name{transform:rotateZ(180deg)!important;display:inline-block;position:absolute;bottom:var(--name-bottom);right:40mm}.word{transform:rotateZ(180deg)!important;display:inline-block;position:absolute;bottom:var(--word-bottom);right:25mm;width:100mm;line-height:7mm}.amount{transform:rotateZ(180deg)!important;display:inline-block;position:absolute;bottom:var(--amount-bottom);left:3mm}.chqprint{display:block;page-break-after:always;break-after:page;page-break-inside:avoid;break-inside:avoid;margin-bottom:200px}@media print{.no-print{display:none!important}body{background:#fff}}@media screen{body{overflow-x:hidden}.containerx{margin-top:10px}#chequecontainer{display:block;margin-left:340px;padding:10px 20px;text-align:left;margin-top:52MM}}.font-size-row{display:flex;align-items:center;gap:6px;margin-top:14px}.font-size-row label{font-size:12px;color:#666;font-weight:600;text-transform:uppercase;letter-spacing:.5px;flex:1}.font-size-row .fs-display{font-size:13px;color:#333;min-width:36px;text-align:center}.btn-fs{width:28px;height:28px;border:1px solid #ddd;border-radius:5px;background:#f5f5f5;font-size:16px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#444;flex-shrink:0}.btn-fs:hover{background:#eef4fb;border-color:#2272b5;color:#2272b5}.position-row{display:flex;align-items:center;gap:6px;margin-top:12px}.position-row label{font-size:12px;color:#666;font-weight:600;text-transform:uppercase;letter-spacing:.5px;flex:1}.position-row .pos-display{font-size:13px;color:#333;min-width:42px;text-align:center}.position-row input{flex:1}.app-panel{position:fixed;top:0;left:0;width:320px;height:100vh;background:#fff;box-shadow:2px 0 12px rgba(0,0,0,.12);padding:20px;padding-bottom:145px;box-sizing:border-box;overflow-y:auto;z-index:100}.panel-footer-brand{position:fixed;bottom:0;left:0;width:320px;box-sizing:border-box;padding:12px 16px 14px;background:linear-gradient(135deg,#0f766e 0%,#f59e0b 100%);border-top:none;display:flex;flex-direction:column;align-items:center;gap:3px;z-index:101}.panel-footer-brand .brand-name{font-size:14px;font-weight:800;color:#fff;letter-spacing:2px;text-shadow:0 1px 3px rgba(0,0,0,.3)}.panel-footer-brand .brand-sub{font-size:9.5px;font-weight:500;color:rgba(255,255,255,.7);letter-spacing:1px;text-align:center}.app-panel h2{margin:0 0 20px;font-size:16px;color:#1a1a2e;border-bottom:2px solid transparent;border-image:linear-gradient(90deg,#a9217e,#2272b5) 1;padding-bottom:8px}.field-group{margin-bottom:14px}.field-group label{display:block;font-size:12px;color:#666;margin-bottom:4px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}.field-group input,.field-group select{width:100%;padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-size:14px;box-sizing:border-box;outline:none;transition:border-color .2s}.field-group input:focus,.field-group select:focus{border-color:#2272b5;box-shadow:0 0 0 2px rgba(34,114,181,.12)}.name-wrap{position:relative}.suggestions{position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid #ddd;border-top:none;border-radius:0 0 6px 6px;max-height:180px;overflow-y:auto;z-index:200;display:none;box-shadow:0 4px 8px rgba(0,0,0,.1)}.suggestions .sug-item{padding:8px 10px;font-size:13px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}.suggestions .sug-item:hover,.suggestions .sug-item.active{background:#eef4fb;color:#2272b5}.suggestions .sug-item .del-btn{color:#aaa;font-size:11px;padding:2px 5px;border-radius:3px;cursor:pointer;flex-shrink:0}.suggestions .sug-item .del-btn:hover{color:#e53935;background:#ffeaea}.btn-row{display:flex;gap:8px;margin-top:20px}.btn{flex:1;padding:10px;border:none;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer;transition:background .2s}.btn-primary{background:linear-gradient(135deg,#2272b5,#1a5f99);color:#fff}.btn-primary:hover{background:linear-gradient(135deg,#1a5f99,#144d80)}.btn-secondary{background:#f0f2f5;color:#555}.btn-secondary:hover{background:#e0e3e8}.btn-print{background:linear-gradient(135deg,#a9217e,#871965);color:#fff}.btn-print:hover{background:linear-gradient(135deg,#871965,#66134c)}#chequecontainer{display:inline-block;text-align:center}.saved-names-section{margin-top:16px;border-top:1px solid #eee;padding-top:12px}.saved-names-section h3{font-size:11px;text-transform:uppercase;color:#999;letter-spacing:.5px;margin:0 0 8px}.saved-tag{display:inline-block;background:#eef4fb;border:1px solid #b8d3ec;color:#2272b5;border-radius:4px;font-size:12px;padding:3px 8px;margin:2px;cursor:pointer;transition:background .15s,color .15s}.saved-tag:hover{background:linear-gradient(135deg,#0f766e,#f59e0b);border-color:transparent;color:#fff}#pwa-install{display:none;width:100%;margin-top:10px;padding:9px 10px;border:none;border-radius:6px;background:linear-gradient(135deg,#0f766e,#f59e0b);color:#fff;font-size:13px;font-weight:600;cursor:pointer;align-items:center;justify-content:center;gap:6px}#pwa-install.show{display:flex}.brand-tip{font-size:10px;color:rgba(255,255,255,.82);text-align:center;line-height:1.5;border-top:1px solid rgba(255,255,255,.2);padding-top:8px;margin-bottom:6px}</style></head><body><div class="app-panel no-print"><h2>&#x2710; Prachit Cheque Printer</h2><div class="field-group"><label>Pay To</label><div class="name-wrap"><input type="text" id="inp-name" placeholder="Party name..." autocomplete="off"><div class="suggestions" id="suggestions"></div></div></div><div class="field-group"><label>Date</label><input type="date" id="inp-date"></div><div class="field-group"><label>Amount (Rs.)</label><input type="number" id="inp-amount" placeholder="0.00" min="0" step="0.01"></div><div class="field-group"><label>Amount in Words</label><input type="text" id="inp-word" placeholder="Rs. One Thousand only" autocomplete="off"></div><div class="field-group"><label>Payment Type</label><select id="inp-type"><option value="">Bearer</option><option value="ChequeACPayee">A/C Payee Only</option></select></div><div class="font-size-row"><label>Font Size</label><button class="btn-fs" onclick="changeFontSize(-1)">&#8722;</button><span class="fs-display" id="fs-display">14px</span><button class="btn-fs" onclick="changeFontSize(1)">&#43;</button></div><div class="position-row"><label>Name Position</label><input class="shift-range" type="range" id="name-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition(&#39;name&#39;,this.value)"><span class="pos-display" id="name-shift-display">0mm</span></div><div class="position-row"><label>Amount Position</label><input class="shift-range" type="range" id="amount-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition(&#39;amount&#39;,this.value)"><span class="pos-display" id="amount-shift-display">0mm</span></div><div class="position-row"><label>Words Position</label><input class="shift-range" type="range" id="word-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition(&#39;word&#39;,this.value)"><span class="pos-display" id="word-shift-display">0mm</span></div><button id="pwa-install" onclick="_pwaInstall()">&#8615; Install App</button><div class="btn-row"><button class="btn btn-secondary" onclick="resetForm()">Clear</button><!--<button class="btn btn-primary" onclick="updatePreview()">Preview</button>--><button class="btn btn-print" onclick="printCheque()">&#128438; Print</button></div><div class="saved-names-section" id="saved-names-section" style="display:none"><h3>Recent Names</h3><div id="saved-tags"></div></div><div class="panel-footer-brand"><span class="brand-tip">&#9432; Prachit Cheque Printer is designed for fast cheque entry and clean printing.</span><span class="brand-name">Prachit Cheque Printer</span><span class="brand-sub">Cheque printing made simple</span></div></div><div id="chequecontainer"><div class="chqprint" id="chqprint0"><div class="containerx"><div class="chqborder"><span class="date" id="chq-date"><span id="d0">&nbsp;</span><span id="d1">&nbsp;</span><span id="d2">&nbsp;</span><span id="d3">&nbsp;</span><span id="d4">&nbsp;</span><span id="d5">&nbsp;</span><span id="d6">&nbsp;</span><span id="d7">&nbsp;</span></span><span class="paymenttype" id="chq-paytype" style="display:none">A/C PAYEE ONLY</span><span class="name" id="chq-name"></span><span class="amount" id="chq-amount"></span><span class="word" id="chq-word"></span></div></div></div></div><script>var _k='cheque_party_names',_m=20;function _g(){try{return JSON.parse(localStorage.getItem(_k)||'[]')}catch(e){return[]}}function _sv(n){if(!n||!n.trim())return;n=n.trim();var l=_g().filter(function(x){return x!==n});l.unshift(n);if(l.length>_m)l=l.slice(0,_m);localStorage.setItem(_k,JSON.stringify(l));_rt()}function _dv(n){localStorage.setItem(_k,JSON.stringify(_g().filter(function(x){return x!==n})));_rt()}function _fa(n){if(!n&&n!==0)return'';var p=parseFloat(n).toFixed(2).split('.'),i=p[0],d=p[1];if(i.length>3){var l=i.slice(-3),r=i.slice(0,-3).replace(/\B(?=(\d{2})+(?!\d))/g,',');i=r+','+l}return i+'.'+d}var _o=['','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen','Seventeen','Eighteen','Nineteen'],_t=['','','Twenty','Thirty','Forty','Fifty','Sixty','Seventy','Eighty','Ninety'];function _nw(n){n=parseInt(n);if(isNaN(n)||n===0)return'Zero';if(n<20)return _o[n];if(n<100)return _t[Math.floor(n/10)]+(n%10?' '+_o[n%10]:'');if(n<1e3)return _o[Math.floor(n/100)]+' Hundred'+(n%100?' '+_nw(n%100):'');if(n<1e5)return _nw(Math.floor(n/1e3))+' Thousand'+(n%1e3?' '+_nw(n%1e3):'');if(n<1e7)return _nw(Math.floor(n/1e5))+' Lakh'+(n%1e5?' '+_nw(n%1e5):'');return _nw(Math.floor(n/1e7))+' Crore'+(n%1e7?' '+_nw(n%1e7):'')}function _aw(v){if(!v)return'';v=parseFloat(v);if(isNaN(v))return'';var i=Math.floor(v),d=Math.round((v-i)*100),w=_nw(i);if(d>0)w+=' and Paisa '+_nw(d);return w}function _td(){var x=new Date(),mm=String(x.getMonth()+1).padStart(2,'0'),dd=String(x.getDate()).padStart(2,'0');return x.getFullYear()+'-'+mm+'-'+dd}function _sb(s){var v=s&&s.length===10?[s[8],s[9],s[5],s[6],s[0],s[1],s[2],s[3]]:Array(8).fill(' ');for(var i=0;i<8;i++)document.getElementById('d'+i).textContent=v[i]||' '}function updatePreview(){var n=document.getElementById('inp-name').value.trim(),dt=document.getElementById('inp-date').value,a=document.getElementById('inp-amount').value,w=document.getElementById('inp-word').value.trim(),tp=document.getElementById('inp-type').value;document.getElementById('chq-name').textContent=n;_sb(dt);if(a){document.getElementById('chq-amount').textContent=_fa(a);document.getElementById('chq-word').textContent=w||('Rs.'+_aw(a)+' only')}else{document.getElementById('chq-amount').textContent='';document.getElementById('chq-word').textContent=''}document.getElementById('chq-paytype').style.display=tp==='ChequeACPayee'?'':'none'}function resetForm(){document.getElementById('inp-name').value='';document.getElementById('inp-date').value=_td();document.getElementById('inp-amount').value='';document.getElementById('inp-word').value='';document.getElementById('inp-type').value='';updatePreview()}function printCheque(){var n=document.getElementById('inp-name').value.trim();updatePreview();if(n)_sv(n);window.print()}var _se=document.getElementById('suggestions'),_ni=document.getElementById('inp-name'),_ai=-1;function _ss(q){var ns=_g();q=(q||'').toLowerCase();var f=q?ns.filter(function(n){return n.toLowerCase().indexOf(q)!==-1}):ns;if(!f.length){_hs();return}_se.innerHTML='';f.forEach(function(nm){var it=document.createElement('div');it.className='sug-item';var tx=document.createElement('span');tx.textContent=nm;tx.style.cssText='flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap';var db=document.createElement('span');db.className='del-btn';db.textContent='\u2715';db.title='Remove';db.addEventListener('mousedown',function(e){e.preventDefault();e.stopPropagation();_dv(nm);_ss(_ni.value)});it.appendChild(tx);it.appendChild(db);it.addEventListener('mousedown',function(e){if(e.target===db)return;e.preventDefault();_ni.value=nm;_hs();updatePreview()});_se.appendChild(it)});_ai=-1;_se.style.display='block'}function _hs(){_se.style.display='none';_ai=-1}_ni.addEventListener('input',function(){_ss(this.value);updatePreview()});_ni.addEventListener('focus',function(){_ss(this.value)});_ni.addEventListener('blur',function(){setTimeout(_hs,150)});_ni.addEventListener('keydown',function(e){var it=_se.querySelectorAll('.sug-item');if(!it.length)return;if(e.key==='ArrowDown'){e.preventDefault();_ai=Math.min(_ai+1,it.length-1);it.forEach(function(el,i){el.classList.toggle('active',i===_ai)})}else if(e.key==='ArrowUp'){e.preventDefault();_ai=Math.max(_ai-1,-1);it.forEach(function(el,i){el.classList.toggle('active',i===_ai)})}else if(e.key==='Enter'&&_ai>=0){e.preventDefault();_ni.value=it[_ai].querySelector('span').textContent;_hs();updatePreview()}else if(e.key==='Escape')_hs()});function _rt(){var ns=_g(),sc=document.getElementById('saved-names-section'),tg=document.getElementById('saved-tags');if(!ns.length){sc.style.display='none';return}sc.style.display='block';tg.innerHTML='';ns.slice(0,10).forEach(function(nm){var tg2=document.createElement('span');tg2.className='saved-tag';tg2.textContent=nm;tg2.addEventListener('click',function(){_ni.value=nm;updatePreview()});tg.appendChild(tg2)})}var _fo=['inp-name','inp-date','inp-amount','inp-word','inp-type'];_fo.forEach(function(id,i){document.getElementById(id).addEventListener('keydown',function(e){if(e.key!=='Enter')return;e.preventDefault();var nx=_fo[i+1];if(nx)document.getElementById(nx).focus();else updatePreview()})});document.getElementById('inp-date').addEventListener('change',updatePreview);document.getElementById('inp-amount').addEventListener('input',updatePreview);document.getElementById('inp-word').addEventListener('input',updatePreview);document.getElementById('inp-type').addEventListener('change',updatePreview);var _fk='cheque_font_size',_mn=8,_mx=28;function _gf(){return parseInt(localStorage.getItem(_fk)||'14')}function _af(sz){document.querySelector('.containerx').style.fontSize=sz+'px';document.getElementById('fs-display').textContent=sz+'px';localStorage.setItem(_fk,sz)}function changeFontSize(d){_af(Math.min(_mx,Math.max(_mn,_gf()+d)))}var _np='cheque_name_shift',_ap='cheque_amount_shift',_wp='cheque_word_shift';function _ps(){var c=document.querySelector('.containerx'),n=parseInt(localStorage.getItem(_np)||'0',10),a=parseInt(localStorage.getItem(_ap)||'0',10),w=parseInt(localStorage.getItem(_wp)||'0',10);c.style.setProperty('--name-bottom',(21+n)+'mm');c.style.setProperty('--amount-bottom',(30+a)+'mm');c.style.setProperty('--word-bottom',(27+w)+'mm');document.getElementById('name-shift').value=n;document.getElementById('amount-shift').value=a;document.getElementById('word-shift').value=w;document.getElementById('name-shift-display').textContent=n+'mm';document.getElementById('amount-shift-display').textContent=a+'mm';document.getElementById('word-shift-display').textContent=w+'mm'}function adjustChequePosition(type,val){var key=type==='name'?_np:type==='amount'?_ap:_wp;localStorage.setItem(key,parseInt(val,10));_ps()}document.getElementById('inp-date').value=_td();_af(_gf());_ps();_rt();updatePreview();var _pwaEvt=null;window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();_pwaEvt=e;document.getElementById('pwa-install').classList.add('show');});function _pwaInstall(){if(!_pwaEvt)return;_pwaEvt.prompt();_pwaEvt.userChoice.then(function(){_pwaEvt=null;document.getElementById('pwa-install').classList.remove('show');});}window.addEventListener('appinstalled',function(){document.getElementById('pwa-install').classList.remove('show');});if('serviceWorker' in navigator){navigator.serviceWorker.register('/cheque_printer/sw.js?').catch(function(e){console.warn('SW:',e);});}</script><script type="module" src="../beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"6c10cef2752646e3883e4da07b6aee0d","r":1}' crossorigin="anonymous"></script>
-</body></html>
+Here is the updated code with the new **Date Position** adjustment slider added right alongside the Name, Amount, and Words position controls. It fully integrates with `localStorage` so your date position adjustments will be saved automatically just like the others.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="manifest.json"><meta name="theme-color" content="#2272b5"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Prachit Cheque Printer"><link rel="apple-touch-icon" href="../assets/core/logo/128.png">
+<style>
+@page{size:a4 portrait !important;margin:0}
+body{margin:0;text-align:center;font-family:Arial,sans-serif;background:#fff}
+.containerx{transform:rotateZ(90deg);display:inline-block;text-align:left;margin-top:52mm;width:190mm;height:90mm;border:1px dashed rgba(125,125,125,.1);box-sizing:border-box;padding:8px;font-family:"Arial Narrow";font-size:14px}
+.chqborder{--b:1px;--c:red;--w:1px;border:var(--b) solid #0000;--_g:#0000 90deg,var(--c) 0;--_p:var(--w) var(--w) border-box no-repeat;background:conic-gradient(from 90deg at top var(--b) left var(--b),var(--_g)) 0 0/var(--_p),conic-gradient(from 180deg at top var(--b) right var(--b),var(--_g)) 100% 0/var(--_p),conic-gradient(from 0deg at bottom var(--b) left var(--b),var(--_g)) 0 100%/var(--_p),conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 100% 100%/var(--_p)}
+.date{transform:rotateZ(180deg)!important;display:inline-block;position:absolute;bottom:var(--date-bottom);left:var(--date-left)}
+span.date span{border:solid thin white;padding:2mm;font-size:14px}
+.paymenttype{transform:rotateZ(150deg)!important;display:inline-block;position:absolute;bottom:8mm;right:0;border-top:solid thin black;border-bottom:solid thin black}
+.containerx{--name-bottom:21mm;--amount-bottom:30mm;--word-bottom:27mm;--date-bottom:9mm;--date-left:1mm}
+.name{transform:rotateZ(180deg)!important;display:inline-block;position:absolute;bottom:var(--name-bottom);right:40mm}
+.word{transform:rotateZ(180deg)!important;display:inline-block;position:absolute;bottom:var(--word-bottom);right:25mm;width:100mm;line-height:7mm}
+.amount{transform:rotateZ(180deg)!important;display:inline-block;position:absolute;bottom:var(--amount-bottom);left:3mm}
+.chqprint{display:block;page-break-after:always;break-after:page;page-break-inside:avoid;break-inside:avoid;margin-bottom:200px}
+@media print{.no-print{display:none!important}body{background:#fff}}
+@media screen{body{overflow-x:hidden}.containerx{margin-top:10px}#chequecontainer{display:block;margin-left:340px;padding:10px 20px;text-align:left;margin-top:52MM}}
+.font-size-row{display:flex;align-items:center;gap:6px;margin-top:14px}
+.font-size-row label{font-size:12px;color:#666;font-weight:600;text-transform:uppercase;letter-spacing:.5px;flex:1}
+.font-size-row .fs-display{font-size:13px;color:#333;min-width:36px;text-align:center}
+.btn-fs{width:28px;height:28px;border:1px solid #ddd;border-radius:5px;background:#f5f5f5;font-size:16px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#444;flex-shrink:0}
+.btn-fs:hover{background:#eef4fb;border-color:#2272b5;color:#2272b5}
+.position-row{display:flex;align-items:center;gap:6px;margin-top:12px}
+.position-row label{font-size:12px;color:#666;font-weight:600;text-transform:uppercase;letter-spacing:.5px;flex:1}
+.position-row .pos-display{font-size:13px;color:#333;min-width:42px;text-align:center}
+.position-row input{flex:1}
+.app-panel{position:fixed;top:0;left:0;width:320px;height:100vh;background:#fff;box-shadow:2px 0 12px rgba(0,0,0,.12);padding:20px;padding-bottom:145px;box-sizing:border-box;overflow-y:auto;z-index:100}
+.panel-footer-brand{position:fixed;bottom:0;left:0;width:320px;box-sizing:border-box;padding:12px 16px 14px;background:linear-gradient(135deg,#0f766e 0%,#f59e0b 100%);border-top:none;display:flex;flex-direction:column;align-items:center;gap:3px;z-index:101}
+.panel-footer-brand .brand-name{font-size:14px;font-weight:800;color:#fff;letter-spacing:2px;text-shadow:0 1px 3px rgba(0,0,0,.3)}
+.panel-footer-brand .brand-sub{font-size:9.5px;font-weight:500;color:rgba(255,255,255,.7);letter-spacing:1px;text-align:center}
+.app-panel h2{margin:0 0 20px;font-size:16px;color:#1a1a2e;border-bottom:2px solid transparent;border-image:linear-gradient(90deg,#a9217e,#2272b5) 1;padding-bottom:8px}
+.field-group{margin-bottom:14px}
+.field-group label{display:block;font-size:12px;color:#666;margin-bottom:4px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.field-group input,.field-group select{width:100%;padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-size:14px;box-sizing:border-box;outline:none;transition:border-color .2s}
+.field-group input:focus,.field-group select:focus{border-color:#2272b5;box-shadow:0 0 0 2px rgba(34,114,181,.12)}
+.name-wrap{position:relative}
+.suggestions{position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid #ddd;border-top:none;border-radius:0 0 6px 6px;max-height:180px;overflow-y:auto;z-index:200;display:none;box-shadow:0 4px 8px rgba(0,0,0,.1)}
+.suggestions .sug-item{padding:8px 10px;font-size:13px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.suggestions .sug-item:hover,.suggestions .sug-item.active{background:#eef4fb;color:#2272b5}
+.suggestions .sug-item .del-btn{color:#aaa;font-size:11px;padding:2px 5px;border-radius:3px;cursor:pointer;flex-shrink:0}
+.suggestions .sug-item .del-btn:hover{color:#e53935;background:#ffeaea}
+.btn-row{display:flex;gap:8px;margin-top:20px}
+.btn{flex:1;padding:10px;border:none;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer;transition:background .2s}
+.btn-primary{background:linear-gradient(135deg,#2272b5,#1a5f99);color:#fff}
+.btn-primary:hover{background:linear-gradient(135deg,#1a5f99,#144d80)}
+.btn-secondary{background:#f0f2f5;color:#555}
+.btn-secondary:hover{background:#e0e3e8}
+.btn-print{background:linear-gradient(135deg,#a9217e,#871965);color:#fff}
+.btn-print:hover{background:linear-gradient(135deg,#871965,#66134c)}
+#chequecontainer{display:inline-block;text-align:center}
+.saved-names-section{margin-top:16px;border-top:1px solid #eee;padding-top:12px}
+.saved-names-section h3{font-size:11px;text-transform:uppercase;color:#999;letter-spacing:.5px;margin:0 0 8px}
+.saved-tag{display:inline-block;background:#eef4fb;border:1px solid #b8d3ec;color:#2272b5;border-radius:4px;font-size:12px;padding:3px 8px;margin:2px;cursor:pointer;transition:background .15s,color .15s}
+.saved-tag:hover{background:linear-gradient(135deg,#0f766e,#f59e0b);border-color:transparent;color:#fff}
+#pwa-install{display:none;width:100%;margin-top:10px;padding:9px 10px;border:none;border-radius:6px;background:linear-gradient(135deg,#0f766e,#f59e0b);color:#fff;font-size:13px;font-weight:600;cursor:pointer;align-items:center;justify-content:center;gap:6px}
+#pwa-install.show{display:flex}
+.brand-tip{font-size:10px;color:rgba(255,255,255,.82);text-align:center;line-height:1.5;border-top:1px solid rgba(255,255,255,.2);padding-top:8px;margin-bottom:6px}
+</style>
+</head>
+<body>
+<div class="app-panel no-print">
+  <h2>&#x2710; Prachit Cheque Printer</h2>
+  <div class="field-group">
+    <label>Pay To</label>
+    <div class="name-wrap">
+      <input type="text" id="inp-name" placeholder="Party name..." autocomplete="off">
+      <div class="suggestions" id="suggestions"></div>
+    </div>
+  </div>
+  <div class="field-group">
+    <label>Date</label>
+    <input type="date" id="inp-date">
+  </div>
+  <div class="field-group">
+    <label>Amount (Rs.)</label>
+    <input type="number" id="inp-amount" placeholder="0.00" min="0" step="0.01">
+  </div>
+  <div class="field-group">
+    <label>Amount in Words</label>
+    <input type="text" id="inp-word" placeholder="Rs. One Thousand only" autocomplete="off">
+  </div>
+  <div class="field-group">
+    <label>Payment Type</label>
+    <select id="inp-type">
+      <option value="">Bearer</option>
+      <option value="ChequeACPayee">A/C Payee Only</option>
+    </select>
+  </div>
+  <div class="font-size-row">
+    <label>Font Size</label>
+    <button class="btn-fs" onclick="changeFontSize(-1)">&#8722;</button>
+    <span class="fs-display" id="fs-display">14px</span>
+    <button class="btn-fs" onclick="changeFontSize(1)">&#43;</button>
+  </div>
+  <div class="position-row">
+    <label>Date Position</label>
+    <input class="shift-range" type="range" id="date-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition('date',this.value)">
+    <span class="pos-display" id="date-shift-display">0mm</span>
+  </div>
+  <div class="position-row">
+    <label>Name Position</label>
+    <input class="shift-range" type="range" id="name-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition('name',this.value)">
+    <span class="pos-display" id="name-shift-display">0mm</span>
+  </div>
+  <div class="position-row">
+    <label>Amount Position</label>
+    <input class="shift-range" type="range" id="amount-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition('amount',this.value)">
+    <span class="pos-display" id="amount-shift-display">0mm</span>
+  </div>
+  <div class="position-row">
+    <label>Words Position</label>
+    <input class="shift-range" type="range" id="word-shift" min="-10" max="10" step="1" value="0" oninput="adjustChequePosition('word',this.value)">
+    <span class="pos-display" id="word-shift-display">0mm</span>
+  </div>
+  <button id="pwa-install" onclick="_pwaInstall()">&#8615; Install App</button>
+  <div class="btn-row">
+    <button class="btn btn-secondary" onclick="resetForm()">Clear</button>
+    <button class="btn btn-print" onclick="printCheque()">&#128438; Print</button>
+  </div>
+  <div class="saved-names-section" id="saved-names-section" style="display:none">
+    <h3>Recent Names</h3>
+    <div id="saved-tags"></div>
+  </div>
+  <div class="panel-footer-brand">
+    <span class="brand-tip">&#9432; Prachit Cheque Printer is designed for fast cheque entry and clean printing.</span>
+    <span class="brand-name">Prachit Cheque Printer</span>
+    <span class="brand-sub">Cheque printing made simple</span>
+  </div>
+</div>
+
+<div id="chequecontainer">
+  <div class="chqprint" id="chqprint0">
+    <div class="containerx">
+      <div class="chqborder">
+        <span class="date" id="chq-date">
+          <span id="d0">&nbsp;</span><span id="d1">&nbsp;</span><span id="d2">&nbsp;</span><span id="d3">&nbsp;</span><span id="d4">&nbsp;</span><span id="d5">&nbsp;</span><span id="d6">&nbsp;</span><span id="d7">&nbsp;</span>
+        </span>
+        <span class="paymenttype" id="chq-paytype" style="display:none">A/C PAYEE ONLY</span>
+        <span class="name" id="chq-name"></span>
+        <span class="amount" id="chq-amount"></span>
+        <span class="word" id="chq-word"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var _k='cheque_party_names',_m=20;
+function _g(){try{return JSON.parse(localStorage.getItem(_k)||'[]')}catch(e){return[]}}
+function _sv(n){if(!n||!n.trim())return;n=n.trim();var l=_g().filter(function(x){return x!==n});l.unshift(n);if(l.length>_m)l=l.slice(0,_m);localStorage.setItem(_k,JSON.stringify(l));_rt()}
+function _dv(n){localStorage.setItem(_k,JSON.stringify(_g().filter(function(x){return x!==n})));_rt()}
+function _fa(n){if(!n&&n!==0)return'';var p=parseFloat(n).toFixed(2).split('.'),i=p[0],d=p[1];if(i.length>3){var l=i.slice(-3),r=i.slice(0,-3).replace(/\B(?=(\d{2})+(?!\d))/g,',');i=r+','+l}return i+'.'+d}
+var _o=['','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen','Seventeen','Eighteen','Nineteen'],_t=['','','Twenty','Thirty','Forty','Fifty','Sixty','Seventy','Eighty','Ninety'];
+function _nw(n){n=parseInt(n);if(isNaN(n)||n===0)return'Zero';if(n<20)return _o[n];if(n<100)return _t[Math.floor(n/10)]+(n%10?' '+_o[n%10]:'');if(n<1e3)return _o[Math.floor(n/100)]+' Hundred'+(n%100?' '+_nw(n%100):'');if(n<1e5)return _nw(Math.floor(n/1e3))+' Thousand'+(n%1e3?' '+_nw(n%1e3):'');if(n<1e7)return _nw(Math.floor(n/1e5))+' Lakh'+(n%1e5?' '+_nw(n%1e5):'');return _nw(Math.floor(n/1e7))+' Crore'+(n%1e7?' '+_nw(n%1e7):'')}
+function _aw(v){if(!v)return'';v=parseFloat(v);if(isNaN(v))return'';var i=Math.floor(v),d=Math.round((v-i)*100),w=_nw(i);if(d>0)w+=' and Paisa '+_nw(d);return w}
+function _td(){var x=new Date(),mm=String(x.getMonth()+1).padStart(2,'0'),dd=String(x.getDate()).padStart(2,'0');return x.getFullYear()+'-'+mm+'-'+dd}
+function _sb(s){var v=s&&s.length===10?[s[8],s[9],s[5],s[6],s[0],s[1],s[2],s[3]]:Array(8).fill(' ');for(var i=0;i<8;i++)document.getElementById('d'+i).textContent=v[i]||' '}
+function updatePreview(){var n=document.getElementById('inp-name').value.trim(),dt=document.getElementById('inp-date').value,a=document.getElementById('inp-amount').value,w=document.getElementById('inp-word').value.trim(),tp=document.getElementById('inp-type').value;document.getElementById('chq-name').textContent=n;_sb(dt);if(a){document.getElementById('chq-amount').textContent=_fa(a);document.getElementById('chq-word').textContent=w||('Rs.'+_aw(a)+' only')}else{document.getElementById('chq-amount').textContent='';document.getElementById('chq-word').textContent=''}document.getElementById('chq-paytype').style.display=tp==='ChequeACPayee'?'':'none'}
+function resetForm(){document.getElementById('inp-name').value='';document.getElementById('inp-date').value=_td();document.getElementById('inp-amount').value='';document.getElementById('inp-word').value='';document.getElementById('inp-type').value='';updatePreview()}
+function printCheque(){var n=document.getElementById('inp-name').value.trim();updatePreview();if(n)_sv(n);window.print()}
+var _se=document.getElementById('suggestions'),_ni=document.getElementById('inp-name'),_ai=-1;
+function _ss(q){var ns=_g();q=(q||'').toLowerCase();var f=q?ns.filter(function(n){return n.toLowerCase().indexOf(q)!==-1}):ns;if(!f.length){_hs();return}_se.innerHTML='';f.forEach(function(nm){var it=document.createElement('div');it.className='sug-item';var tx=document.createElement('span');tx.textContent=nm;tx.style.cssText='flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap';var db=document.createElement('span');db.className='del-btn';db.textContent='\u2715';db.title='Remove';db.addEventListener('mousedown',function(e){e.preventDefault();e.stopPropagation();_dv(nm);_ss(_ni.value)});it.appendChild(tx);it.appendChild(db);it.addEventListener('mousedown',function(e){if(e.target===db)return;e.preventDefault();_ni.value=nm;_hs();updatePreview()});_se.appendChild(it)});_ai=-1;_se.style.display='block'}
+function _hs(){_se.style.display='none';_ai=-1}
+_ni.addEventListener('input',function(){_ss(this.value);updatePreview()});
+_ni.addEventListener('focus',function(){_ss(this.value)});
+_ni.addEventListener('blur',function(){setTimeout(_hs,150)});
+_ni.addEventListener('keydown',function(e){var it=_se.querySelectorAll('.sug-item');if(!it.length)return;if(e.key==='ArrowDown'){e.preventDefault();_ai=Math.min(_ai+1,it.length-1);it.forEach(function(el,i){el.classList.toggle('active',i===_ai)})}else if(e.key==='ArrowUp'){e.preventDefault();_ai=Math.max(_ai-1,-1);it.forEach(function(el,i){el.classList.toggle('active',i===_ai)})}else if(e.key==='Enter'&&_ai>=0){e.preventDefault();_ni.value=it[_ai].querySelector('span').textContent;_hs();updatePreview()}else if(e.key==='Escape')_hs()});
+function _rt(){var ns=_g(),sc=document.getElementById('saved-names-section'),tg=document.getElementById('saved-tags');if(!ns.length){sc.style.display='none';return}sc.style.display='block';tg.innerHTML='';ns.slice(0,10).forEach(function(nm){var tg2=document.createElement('span');tg2.className='saved-tag';tg2.textContent=nm;tg2.addEventListener('click',function(){_ni.value=nm;updatePreview()});tg.appendChild(tg2)})}
+var _fo=['inp-name','inp-date','inp-amount','inp-word','inp-type'];
+_fo.forEach(function(id,i){document.getElementById(id).addEventListener('keydown',function(e){if(e.key!=='Enter')return;e.preventDefault();var nx=_fo[i+1];if(nx)document.getElementById(nx).focus();else updatePreview()})});
+document.getElementById('inp-date').addEventListener('change',updatePreview);
+document.getElementById('inp-amount').addEventListener('input',updatePreview);
+document.getElementById('inp-word').addEventListener('input',updatePreview);
+document.getElementById('inp-type').addEventListener('change',updatePreview);
+
+var _fk='cheque_font_size',_mn=8,_mx=28;
+function _gf(){return parseInt(localStorage.getItem(_fk)||'14')}
+function _af(sz){document.querySelector('.containerx').style.fontSize=sz+'px';document.getElementById('fs-display').textContent=sz+'px';localStorage.setItem(_fk,sz)}
+function changeFontSize(d){_af(Math.min(_mx,Math.max(_mn,_gf()+d)))}
+
+var _dp='cheque_date_shift',_np='cheque_name_shift',_ap='cheque_amount_shift',_wp='cheque_word_shift';
+function _ps(){
+  var c=document.querySelector('.containerx'),
+      d=parseInt(localStorage.getItem(_dp)||'0',10),
+      n=parseInt(localStorage.getItem(_np)||'0',10),
+      a=parseInt(localStorage.getItem(_ap)||'0',10),
+      w=parseInt(localStorage.getItem(_wp)||'0',10);
+  
+  c.style.setProperty('--date-bottom',(9+d)+'mm');
+  c.style.setProperty('--name-bottom',(21+n)+'mm');
+  c.style.setProperty('--amount-bottom',(30+a)+'mm');
+  c.style.setProperty('--word-bottom',(27+w)+'mm');
+  
+  document.getElementById('date-shift').value=d;
+  document.getElementById('name-shift').value=n;
+  document.getElementById('amount-shift').value=a;
+  document.getElementById('word-shift').value=w;
+  
+  document.getElementById('date-shift-display').textContent=d+'mm';
+  document.getElementById('name-shift-display').textContent=n+'mm';
+  document.getElementById('amount-shift-display').textContent=a+'mm';
+  document.getElementById('word-shift-display').textContent=w+'mm';
+}
+function adjustChequePosition(type,val){
+  var key=type==='date'?_dp:type==='name'?_np:type==='amount'?_ap:_wp;
+  localStorage.setItem(key,parseInt(val,10));
+  _ps();
+}
+
+document.getElementById('inp-date').value=_td();
+_af(_gf());
+_ps();
+_rt();
+updatePreview();
+
+var _pwaEvt=null;
+window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();_pwaEvt=e;document.getElementById('pwa-install').classList.add('show');});
+function _pwaInstall(){if(!_pwaEvt)return;_pwaEvt.prompt();_pwaEvt.userChoice.then(function(){_pwaEvt=null;document.getElementById('pwa-install').classList.remove('show');});}
+window.addEventListener('appinstalled',function(){document.getElementById('pwa-install').classList.remove('show');});
+if('serviceWorker' in navigator){navigator.serviceWorker.register('/cheque_printer/sw.js?').catch(function(e){console.warn('SW:',e);});}
+</script>
+<script type="module" src="../beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"6c10cef2752646e3883e4da07b6aee0d","r":1}' crossorigin="anonymous"></script>
+</body>
+</html>
+
+```
